@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "113231739178",
+    "project_id": "lezon-e3f19",
+    "storage_bucket": "lezon-e3f19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113231739178:android:8fba412ada5e812dbcc653",
+        "android_client_info": {
+          "package_name": "com.example.leezon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7uxk3docBpwlyWxKbLwGtTJ6p-CtLURU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
