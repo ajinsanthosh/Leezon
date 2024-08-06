@@ -43,7 +43,7 @@ class Dateofbirth extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     BorderedIconButton(
-                      icon: Icon(Icons.arrow_back),
+                      icon: const Icon(Icons.arrow_back),
                       onPressed: () {
                         Navigator.pushReplacement(
                             context,
@@ -59,7 +59,7 @@ class Dateofbirth extends StatelessWidget {
                         width: 90,
                         height: 40,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 25, 25, 25),
+                          color: const Color.fromARGB(255, 25, 25, 25),
                           borderRadius: BorderRadius.circular(50.0),
                         ),
                         padding: const EdgeInsets.symmetric(horizontal: 16.0),
