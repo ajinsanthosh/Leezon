@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:leezon/model/profile_model.dart';
+import 'package:leezon/hive/profile_model.dart';
 import 'package:leezon/screen/home/navigation_menu.dart';
 import 'package:leezon/screen/login/loginScreen.dart';
-import 'package:leezon/service/hive/profile_service.dart';
+import 'package:leezon/model/profile_service.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
@@ -39,7 +39,7 @@ class _SplashscreenState extends State<Splashscreen> {
           profile.phonenumber.isNotEmpty) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => const NavigationMenu()),
+          MaterialPageRoute(builder: (context) =>  NavigationMenu()),
         );
       } else {
         Navigator.pushReplacement(

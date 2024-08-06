@@ -2,10 +2,11 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:leezon/model/profile_model.dart';
+import 'package:leezon/hive/profile_model.dart';
 import 'package:leezon/screen/home/navigation_menu.dart';
 import 'package:leezon/screen/profile/profile.dart';
-import 'package:leezon/service/hive/profile_service.dart';
+import 'package:leezon/model/profile_service.dart';
+import 'package:leezon/utility/commen_widget/CustomElevatedButton.dart';
 
 class Updateprofile extends StatefulWidget {
   const Updateprofile({super.key});
@@ -73,7 +74,7 @@ class _UpdateprofileState extends State<Updateprofile> {
           onPressed: () {
             Navigator.push(
                context,
-               MaterialPageRoute(builder: (context) =>const NavigationMenu() ),
+               MaterialPageRoute(builder: (context) => NavigationMenu() ),
             );
           },
         ),
@@ -153,9 +154,9 @@ class _UpdateprofileState extends State<Updateprofile> {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your name';
                   }
-                  if (!RegExp(r'^[a-zA-Z]+$').hasMatch(value)) {
-                    return 'Name must contain only letters';
-                  }
+                  // if (!RegExp(r'^[a-zA-Z]+$').hasMatch(value)) {
+                  //   return 'Name must contain only letters';
+                  // }
                   if (value.length < 3) {
                     return 'Name must be at least 3 characters long';
                   }
@@ -269,18 +270,10 @@ class _UpdateprofileState extends State<Updateprofile> {
               const SizedBox(
                 height: 50,
               ),
-              SizedBox(
-                width: 400,
-                height: 55,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    backgroundColor: Colors.black,
-                  ),
-                  onPressed: () {
-                    if (_formKey.currentState?.validate() == true) {
+            CustomElevatedButton(
+              onPressed:(){
+                     
+                      if (_formKey.currentState?.validate() == true) {
                      
                      _saveProfile();
                       Navigator.pushReplacement(
@@ -288,13 +281,8 @@ class _UpdateprofileState extends State<Updateprofile> {
                           MaterialPageRoute(
                               builder: (context) => const ProfilePage()));
                     }
-                  },
-                  child: const Text(
-                    "Update",
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
-                ),
-              ),
+              } ,
+              text:"Update" ,)
             ]),
           ),
         ),
@@ -324,3 +312,4 @@ void __showSnackBar(BuildContext context, String content) {
     ),
   );
 }
+  

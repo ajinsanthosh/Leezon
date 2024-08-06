@@ -4,6 +4,7 @@ import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:leezon/screen/login/forgotpassword.dart';
 import 'package:leezon/screen/login/loginScreen.dart';
 import 'package:leezon/screen/profile/resetpassword.dart';
 

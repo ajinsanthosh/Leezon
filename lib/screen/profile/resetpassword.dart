@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:leezon/model/profile_model.dart';
+import 'package:leezon/hive/profile_model.dart';
 import 'package:leezon/screen/home/navigation_menu.dart';
-import 'package:leezon/service/hive/profile_service.dart';
+import 'package:leezon/model/profile_service.dart';
+import 'package:leezon/screen/profile/setteing.dart';
+import 'package:leezon/utility/commen_widget/iconbutton.dart';
 
-class Forgotpasswordpage extends StatefulWidget {
-  const Forgotpasswordpage({
+class Resetpassword extends StatefulWidget {
+  const Resetpassword({
     super.key,
   });
 
   @override
-  State<Forgotpasswordpage> createState() => _ForgotpasswordpageState();
+  State<Resetpassword> createState() => _ResetpasswordState();
 }
 
-class _ForgotpasswordpageState extends State<Forgotpasswordpage> {
+class _ResetpasswordState extends State<Resetpassword> {
   final _oldPasswordController = TextEditingController();
   bool _isPasswordVisible = false;
   final _formKey = GlobalKey<FormState>();
@@ -58,14 +60,23 @@ class _ForgotpasswordpageState extends State<Forgotpasswordpage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const NavigationMenu()),
-            );
-          },
+       
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 10, top: 10),
+          child: BorderedIconButton(
+            icon: const Icon(Icons.arrow_back),
+            size: 40, // Diameter of the circle
+            borderColor: Color.fromARGB(255, 151, 149, 149),
+
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const Setteing (),
+                ),
+              );
+            }, backgroundColor: const Color.fromARGB(255, 151, 149, 149),
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -102,9 +113,10 @@ class _ForgotpasswordpageState extends State<Forgotpasswordpage> {
                   ),
                   const Center(
                     child: Text(
-                      "Your new password must be different \n       from previous used pssword",
+                      "Your new password must be different  from  \n               previous used pssword",
                       style: TextStyle(fontSize: 16, color: Colors.black),
                     ),
+                    
                   ),
                   const SizedBox(
                     height: 25,
@@ -277,7 +289,7 @@ class _ForgotpasswordpageState extends State<Forgotpasswordpage> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      const NavigationMenu()));
+                                       NavigationMenu()));
                         }
                       },
                       child: const Text(

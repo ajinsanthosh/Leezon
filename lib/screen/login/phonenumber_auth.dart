@@ -46,12 +46,6 @@ class _EmailverificationState extends State<Emailverification> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Center(
-                      child: Text("Forgot",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 32,
-                              fontWeight: FontWeight.bold))),
                   Center(
                     child: Container(
                       height: 260,
@@ -76,9 +70,9 @@ class _EmailverificationState extends State<Emailverification> {
                   ),
                   const Center(
                     child: Text(
-                      "Dont't worry!  Please enter  your Phone Number  associated with your acconut",
+                      "Don't worry! Please enter your phone number",
                       style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 17,
                           color: Color.fromARGB(255, 53, 51, 51)),
                     ),
                   ),

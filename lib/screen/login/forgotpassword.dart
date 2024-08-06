@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:leezon/model/profile_model.dart';
+import 'package:leezon/hive/profile_model.dart';
 import 'package:leezon/screen/home/navigation_menu.dart';
-import 'package:leezon/service/hive/profile_service.dart';
+import 'package:leezon/model/profile_service.dart';
 
 class Forgotpasswordpage extends StatefulWidget {
   const Forgotpasswordpage({
@@ -63,7 +63,7 @@ class _ForgotpasswordpageState extends State<Forgotpasswordpage> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const NavigationMenu()),
+              MaterialPageRoute(builder: (context) =>  NavigationMenu()),
             );
           },
         ),
@@ -244,7 +244,7 @@ class _ForgotpasswordpageState extends State<Forgotpasswordpage> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      const NavigationMenu()));
+                                       NavigationMenu()));
                         }
                       },
                       child: const Text(

@@ -1,5 +1,6 @@
 import 'package:hive_flutter/adapters.dart';
-import 'package:leezon/model/profile_model.dart';
+import 'package:leezon/hive/profile_model.dart';
+
 
 class ProfileService {
   Box<Profile>? _profileBox;

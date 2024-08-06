@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:leezon/model/profile_model.dart';
+import 'package:leezon/hive/profile_model.dart';
 import 'package:leezon/screen/login/loginScreen.dart';
-import 'package:leezon/service/hive/profile_service.dart';
+import 'package:leezon/model/profile_service.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -345,7 +345,8 @@ class _SignupState extends State<Signup> {
                             Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Loginscreen()));
+                                    builder: (context) => Loginscreen())
+                                    );
                           }
                         },
                         child: const Text(

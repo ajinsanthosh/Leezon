@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:leezon/model/profile_model.dart';
+import 'package:leezon/hive/profile_model.dart';
 import 'package:leezon/screen/home/navigation_menu.dart';
 import 'package:leezon/screen/login/phonenumber_auth.dart';
 import 'package:leezon/screen/login/signup.dart';
+import 'package:leezon/screen/login/username.dart';
 
 class Loginscreen extends StatefulWidget {
   const Loginscreen({super.key});
@@ -303,7 +304,7 @@ class _LoginscreenState extends State<Loginscreen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const NavigationMenu()),
+                                  builder: (context) => const  Username()),
                             );
                           },
                           child: Center(
