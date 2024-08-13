@@ -25,7 +25,7 @@ class ChatProvider extends ChangeNotifier {
   final PageController _pageController = PageController();
 
   // index of the current screen
-  int _currentIndex = 0;
+ final  int _currentIndex = 0;
 
   // cuttent chatId
   String _currentChatId = '';
@@ -169,10 +169,10 @@ static initHive() async {
 
   // set current chat id
  
-   void setCurrentIndex({required int newIndex}) {
-    _currentIndex = newIndex;
-    notifyListeners();
-  }
+  //  void setCurrentIndex({required int newIndex}) {
+  //   _currentIndex = newIndex;
+  //   notifyListeners();
+  // }
 
   void setCurrentChatId({required String newChatId}) {
     _currentChatId = newChatId;

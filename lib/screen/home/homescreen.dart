@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:leezon/screen/gemini/chat_screen.dart';
-import 'package:leezon/screen/text_to_image/mainscreen.dart';
-import 'package:leezon/screen/voicechatbot/voicechatbot.dart';
+import 'package:leezon/screen/home/gemini/chat_screen.dart';
+import 'package:leezon/screen/home/text_to_image/mainscreen.dart';
+import 'package:leezon/screen/home/voicechatbot/voicechatbot.dart';
 
 class Homescreen extends StatelessWidget {
  const Homescreen({super.key});
@@ -53,7 +53,7 @@ class Homescreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 50,
+              height: 40,
             ),
             GestureDetector(
               onTap: () {

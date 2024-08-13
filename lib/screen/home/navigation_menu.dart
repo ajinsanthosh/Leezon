@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:leezon/provider/chat_provider.dart';
+import 'package:leezon/provider/NavigationProvider.dart';
 import 'package:leezon/screen/home/homescreen.dart';
 import 'package:leezon/screen/library/screen_library.dart';
 import 'package:leezon/screen/profile/profile.dart';
+import 'package:leezon/utility/pallete.dart';
 import 'package:provider/provider.dart';
 
 class NavigationMenu extends StatefulWidget {
-  NavigationMenu({Key? key}) : super(key: key);
+  final int initialIndex;
+
+  const NavigationMenu({super.key, this.initialIndex = 0});
 
   @override
   State<NavigationMenu> createState() => _NavigationMenuState();
@@ -19,7 +22,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
   @override
   void initState() {
     super.initState();
-    _pageController = PageController();
+    _pageController = PageController(initialPage: widget.initialIndex);
   }
 
   @override
@@ -28,7 +31,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
     super.dispose();
   }
 
-  // list of screens
+  // List of screens
   final List<Widget> _screens = [
     const Homescreen(),
     const ScreenLibrary(),
@@ -37,34 +40,35 @@ class _NavigationMenuState extends State<NavigationMenu> {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<ChatProvider>(
-      builder: (context, chatProvider, child) {
+    return Consumer<NavigationProvider>(
+      builder: (context, navigationProvider, child) {
         return Scaffold(
           body: PageView(
             controller: _pageController,
+            physics: const NeverScrollableScrollPhysics(), 
             children: _screens,
             onPageChanged: (index) {
-              chatProvider.setCurrentIndex(newIndex: index);
+             
+              navigationProvider.setCurrentIndex(index);
             },
           ),
           bottomNavigationBar: Container(
-            color: Colors.white,
+            color: Pallete.whiteColor,
             child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10), 
               child: GNav(
-                gap: 20,
-                backgroundColor: Colors.white,
-                color: Colors.black,
-                activeColor: Colors.white,
-                tabBackgroundColor: Colors.black,
-                padding: const EdgeInsets.all(16),
+                gap: 15,
+                backgroundColor: Pallete.whiteColor,
+                color:Pallete.blackColor,
+                activeColor: Pallete.whiteColor,
+                tabBackgroundColor:Pallete.blackColor,
+              //  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10), // Adjusted padding for GNav
                 onTabChange: (index) {
-                  chatProvider.setCurrentIndex(newIndex: index);
+                  
                   _pageController.jumpToPage(index);
+                  navigationProvider.setCurrentIndex(index);
                 },
-                tabs: _buildGButtons(chatProvider.currentIndex),
-                
+                tabs: _buildGButtons(navigationProvider.currentIndex),
               ),
             ),
           ),
@@ -85,22 +89,22 @@ List<GButton> _buildGButtons(int currentIndex) {
     return GButton(
       icon: info['icon'],
       text: info['text'],
-      iconColor: Colors.white,
-      iconActiveColor: Colors.white,
-      iconSize: 24,
-      textColor: Colors.white,
-      padding: const EdgeInsets.all(16),
+      iconColor: isActive ? Colors.white :Pallete.blackColor,
+      iconActiveColor: Pallete.whiteColor,
+      textColor: Pallete.whiteColor,
+      iconSize: 20, 
+      padding: const EdgeInsets.all(16), 
       leading: isActive
           ? null
           : ClipOval(
               child: Container(
                 color: Colors.grey.shade300,
                 child: Padding(
-                  padding: const EdgeInsets.all(10), // Adjust the padding to increase the size
+                  padding: const EdgeInsets.all(15), 
                   child: Icon(
                     info['icon'],
-                    size: 30,
-                    color: Colors.black,
+                    size: 23, 
+                    color:Pallete.blackColor,
                   ),
                 ),
               ),

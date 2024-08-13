@@ -1,3 +1,4 @@
+
 plugins {
     id "com.android.application"
     // START: FlutterFire Configuration
@@ -25,6 +26,12 @@ def flutterVersionName = localProperties.getProperty("flutter.versionName")
 if (flutterVersionName == null) {
     flutterVersionName = "1.0"
 }
+  def keystoreProperties = new Properties()
+   def keystorePropertiesFile = rootProject.file('key.properties')
+  if (keystorePropertiesFile.exists()) {
+     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+  }
+   
 
 android {
     namespace = "com.example.leezon"
@@ -38,10 +45,25 @@ android {
         jvmTarget = "1.8"
     }
     }
+    android {
+    compileOptions {
+        // other configurations
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+            lintConfig file("lint.xml")
+            // Add the following line to see deprecated warnings
+            lintOptions {
+                check "deprecation"
+            }
+        }
+    }
+}
+
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.leezon"
+        applicationId = "in.leezon"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion 23
@@ -50,16 +72,29 @@ android {
         versionName = flutterVersionName
         multiDexEnabled true
     }
+    signingConfigs {
+           release {
+               keyAlias keystoreProperties['keyAlias']
+               keyPassword keystoreProperties['keyPassword']
+               storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+               storePassword keystoreProperties['storePassword']
+           }
+       }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.debug
+           signingConfig signingConfigs.release
         }
     }
 }
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    implementation "com.google.android.material:material:1.4.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+     implementation("com.google.android.material:material:<version>")
+    // Add any other dependencies your project requires
 }

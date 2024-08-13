@@ -14,16 +14,40 @@ class Profile extends HiveObject {
   late String password;
 
   @HiveField(3)
-  late String phonenumber;
+  late String gender;
 
   @HiveField(4)
   late String imagePath;
+
+  @HiveField(5)
+  late List<String> interestedAreas;
 
   Profile({
     required this.name,
     required this.email,
     required this.password,
-    required this.phonenumber,
-    this.imagePath = 'assets/img/ajin.jpg',
+    required this.gender,
+    required this.imagePath,
+    required this.interestedAreas,
   });
+
+  // Method to update each field
+  void updateProfile({
+    String? newName,
+    String? newEmail,
+    String? newPassword,
+    String? newGender,
+    String? newImagePath,
+    List<String>? newInterestedAreas,
+  }) {
+    if (newName != null) name = newName;
+    if (newEmail != null) email = newEmail;
+    if (newPassword != null) password = newPassword;
+    if (newGender != null) gender = newGender;
+    if (newImagePath != null) imagePath = newImagePath;
+    if (newInterestedAreas != null) interestedAreas = newInterestedAreas;
+
+     save();
+   
+  }
 }

@@ -1,4 +1,3 @@
-
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
@@ -31,7 +30,9 @@ class ImageGenerationProvider with ChangeNotifier {
         url,
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer sk-7CUIa4VgudK4EDRNsvCEpP7bWMi0PInO9kT5g7h83zCpFAMN',
+          'Authorization':
+              //add ypur secreat key here
+              'Bearer sk-e2wShVknbadjfLuFA4iFC22hn80a8SLuGTnPm92DjYrL3f8J',
           'Accept': 'image/png',
         },
         body: jsonEncode({
@@ -99,4 +100,3 @@ class ImageGenerationProvider with ChangeNotifier {
     }
   }
 }
-

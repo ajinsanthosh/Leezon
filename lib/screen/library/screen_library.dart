@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:leezon/hive/image_data.dart';
 import 'package:leezon/provider/ImageProvider.dart';
+import 'package:leezon/provider/voice_provider.dart';
+
 import 'package:leezon/screen/home/navigation_menu.dart';
-import 'package:leezon/utility/commen_widget/arrowwidget.dart';
+import 'package:leezon/utility/commen_widget/custom_iconbutton.dart';
+import 'package:leezon/utility/pallete.dart';
 import 'package:leezon/utility/utilites.dart';
 import 'package:provider/provider.dart';
 
@@ -90,21 +93,20 @@ class ImageDetailScreen extends StatelessWidget {
     return Scaffold(
       
       appBar: AppBar(
-       leading: Padding(
+         leading: Padding(
           padding: const EdgeInsets.only(left: 10, top: 10),
           child: BorderedIconButton(
             icon: const Icon(Icons.arrow_back),
             size: 40, // Diameter of the circle
-            borderColor: Colors.black,
-
+            borderColor: Pallete.blackColor,
             onPressed: () {
-              Navigator.pushReplacement(
+               context.read<VoiceChatProvider>().stopSpeaking();
+              Navigator.pop(
                 context,
-                MaterialPageRoute(
-                  builder: (context) =>  NavigationMenu(),
-                ),
+                MaterialPageRoute(builder: (context) => const NavigationMenu(initialIndex: 1,)),
               );
             },
+            backgroundColor: Pallete.borderColor,
           ),
         ),
       ),

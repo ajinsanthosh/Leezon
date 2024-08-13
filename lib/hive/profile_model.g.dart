@@ -20,15 +20,16 @@ class ProfileAdapter extends TypeAdapter<Profile> {
       name: fields[0] as String,
       email: fields[1] as String,
       password: fields[2] as String,
-      phonenumber: fields[3] as String,
+      gender: fields[3] as String,
       imagePath: fields[4] as String,
+ interestedAreas: (fields[5] as List?)?.cast<String>() ?? [],
     );
   }
 
   @override
   void write(BinaryWriter writer, Profile obj) {
     writer
-      ..writeByte(5)
+      ..writeByte(6)
       ..writeByte(0)
       ..write(obj.name)
       ..writeByte(1)
@@ -36,9 +37,11 @@ class ProfileAdapter extends TypeAdapter<Profile> {
       ..writeByte(2)
       ..write(obj.password)
       ..writeByte(3)
-      ..write(obj.phonenumber)
+      ..write(obj.gender)
       ..writeByte(4)
-      ..write(obj.imagePath);
+      ..write(obj.imagePath)
+      ..writeByte(5)
+      ..write(obj.interestedAreas);
   }
 
   @override

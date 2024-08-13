@@ -1,3 +1,21 @@
+
+
+
+buildscript {
+    ext.kotlin_version = '1.8.0' 
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        
+      
+    }
+}
+
+
+
 allprojects {
     repositories {
         google()
@@ -5,14 +23,18 @@ allprojects {
     }
 }
 
+// Define build directories for subprojects
 rootProject.buildDir = "../build"
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
+
+// Ensure app module is evaluated before other subprojects
 subprojects {
     project.evaluationDependsOn(":app")
 }
 
+// Task to clean build directories
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
