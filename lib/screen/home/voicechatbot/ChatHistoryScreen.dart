@@ -1,10 +1,10 @@
-// lib/screen/chat_history_screen.dart
+
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:leezon/hive/conversation.dart';
 import 'package:leezon/provider/voice_provider.dart';
 import 'package:leezon/utility/constants.dart';
-import 'package:provider/provider.dart';
-import 'package:leezon/hive/conversation.dart'; // Import the Conversation model
+import 'package:provider/provider.dart'; 
 
 class ChatHistoryScreen extends StatelessWidget {
   const ChatHistoryScreen({super.key});

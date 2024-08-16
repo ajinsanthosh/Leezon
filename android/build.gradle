@@ -2,7 +2,7 @@
 
 
 buildscript {
-    ext.kotlin_version = '1.8.0' 
+    ext.kotlin_version = '1.9.0' 
     repositories {
         google()
         mavenCentral()
@@ -23,18 +23,16 @@ allprojects {
     }
 }
 
-// Define build directories for subprojects
+
 rootProject.buildDir = "../build"
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
 
-// Ensure app module is evaluated before other subprojects
 subprojects {
     project.evaluationDependsOn(":app")
 }
 
-// Task to clean build directories
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }

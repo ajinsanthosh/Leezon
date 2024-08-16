@@ -1,4 +1,5 @@
 
+
 plugins {
     id "com.android.application"
     // START: FlutterFire Configuration
@@ -96,5 +97,5 @@ dependencies {
     implementation "com.google.android.material:material:1.4.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
      implementation("com.google.android.material:material:<version>")
-    // Add any other dependencies your project requires
+  
 }

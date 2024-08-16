@@ -1,0 +1,62 @@
+{
+    "logs": [
+        {
+            "outputFile": "in.leezon.app-mergeReleaseResources-51:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\project\\leezon\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "175,831",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "482,1005"
+                    },
+                    "to": {
+                        "startLines": "2,6",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,236",
+                        "endLines": "5,8",
+                        "endColumns": "12,12",
+                        "endOffsets": "231,408"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LENOVO\\.gradle\\caches\\8.9\\transforms\\c361d91d863903ca0eacf84672450070\\transformed\\material-1.4.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,143,267,369,471,587,689,803,931,1047,1169,1305,1425,1559,1679,1791,1917,2041,2171,2293,2431,2565,2681",
+                        "endColumns": "87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,123,129,121,137,133,115,119",
+                        "endOffsets": "138,262,364,466,582,684,798,926,1042,1164,1300,1420,1554,1674,1786,1912,2036,2166,2288,2426,2560,2676,2796"
+                    },
+                    "to": {
+                        "startLines": "16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,33,34,35,36,37,38,39",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1045,1133,1257,1359,1461,1577,1679,1793,1921,2037,2159,2295,2415,2549,2669,2781,2996,3120,3250,3372,3510,3644,3760",
+                        "endColumns": "87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,123,129,121,137,133,115,119",
+                        "endOffsets": "1128,1252,1354,1456,1572,1674,1788,1916,2032,2154,2290,2410,2544,2664,2776,2902,3115,3245,3367,3505,3639,3755,3875"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LENOVO\\.gradle\\caches\\8.9\\transforms\\93463dd65f675448c33396a7a1d0f4d8\\transformed\\appcompat-1.2.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13,14,15,32",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "413,483,567,651,747,849,951,2907",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "478,562,646,742,844,946,1040,2991"
+                    }
+                }
+            ]
+        }
+    ]
+}

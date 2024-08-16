@@ -10,6 +10,8 @@ import 'package:lottie/lottie.dart';
 class Voicechatbot extends StatelessWidget {
   const Voicechatbot({super.key});
 
+  
+
 
 
   @override
@@ -35,18 +37,7 @@ class Voicechatbot extends StatelessWidget {
             backgroundColor: Pallete.borderColor,
           ),
         ),
-          // actions: [
-          //   Padding(
-          //     padding: const EdgeInsets.all(8.0),
-          //     child: IconButton(
-          //       icon: const Icon(Icons.list, size: 30, color: Colors.black),
-          //       onPressed: () {
-          //         context.read<VoiceChatProvider>().stopSpeaking();
-          //         // Add your desired functionality here
-          //       },
-          //     ),
-          //   ),
-          // ],
+         
         ),
         body: Consumer<VoiceChatProvider>(
           builder: (context, provider, child) {

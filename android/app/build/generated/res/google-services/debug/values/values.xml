@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">113231739178</string>
+    <string name="google_api_key" translatable="false">AIzaSyA7uxk3docBpwlyWxKbLwGtTJ6p-CtLURU</string>
+    <string name="google_app_id" translatable="false">1:113231739178:android:8fba412ada5e812dbcc653</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA7uxk3docBpwlyWxKbLwGtTJ6p-CtLURU</string>
+    <string name="google_storage_bucket" translatable="false">lezon-e3f19.appspot.com</string>
+    <string name="project_id" translatable="false">lezon-e3f19</string>
+</resources>
