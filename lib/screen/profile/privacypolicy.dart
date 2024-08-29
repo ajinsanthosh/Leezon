@@ -35,33 +35,91 @@ class Privacypolicy extends StatelessWidget {
 
 class PrivacypolicyContent extends StatelessWidget {
   final String termsText = """
-   1. Introduction
-  This Privacy Policy outlines how we collect, use, and protect your personal information when you use our application.
+   
+Privacy Policy
 
-  2. Information We Collect
-  We may collect the following types of information:
-  - Personal identification information (Name, email address, phone number, etc.)
-  - Usage data and analytics
+Effective Date: 29-09-2024
+1. Introduction
 
-  3. How We Use Your Information
-  We use the information we collect in the following ways:
-  - To provide and maintain our service
-  - To notify you about changes to our service
-  - To improve the app and user experience
-  - To provide customer support
+Welcome to Leezon! This Privacy Policy explains how we collect, use, and protect your personal information when you use our app, which includes features for text-to-image creation, voice interaction with Gemini, and starting conversations with Gemini. We are committed to safeguarding your personal data and ensuring it remains secure.
+2. Information We Collect
 
-  4. Data Security
-  We are committed to ensuring that your information is secure. We have implemented appropriate physical, electronic, and managerial procedures to safeguard and secure the information we collect.
+We collect the following personal information from you:
 
-  5. Sharing Your Information
-  We do not sell, trade, or otherwise transfer your personal information to outside parties except as required by law.
+    Full Name: To personalize your experience within the app.
 
-  6. Changes to This Privacy Policy
-  We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
+    Email Address: For account-related notifications, communication, and support.
 
-  7. Contact Us
-  If you have any questions about this Privacy Policy, please contact us at [Your Contact Information].
+    Gender: To customize interactions, recommendations, and app experience.
 
+    Interested Areas: To tailor content and services based on your preferences.
+
+    Profile Photo: To personalize your profile and enhance user interaction.
+
+    Phone Number: For account verification and essential communication.
+
+    Search History: To improve our services and provide relevant content.
+
+    Generated Images: To save, display, and manage images created through the text-to-image feature.
+
+3. How We Collect Information
+
+We collect information through:
+
+    User Input: When you manually enter data through the app, such as during registration, profile updates, or while using app features.
+
+    Local Storage: Information is stored locally on your device using Hive, which ensures data accessibility and security within the app.
+
+4. How We Use Your Information
+
+We use the collected information to:
+
+    Provide and Improve Services: Enhance your experience with text-to-image creation, voice interaction, and other app features.
+
+    Personalize Content: Offer tailored recommendations and interactions based on your preferences and search history.
+
+    Communicate: Send essential notifications, updates, and support-related information.
+
+    Manage and Display Generated Images: Save, organize, and present images you create through the app’s features.
+
+5. Data Storage and Security
+
+We are deeply committed to ensuring the security and protection of your personal information. Here are the measures we take:
+
+    Data Encryption: All personal information, including email addresses and any sensitive data, is encrypted both during transmission and when stored. We use industry-standard encryption protocols (e.g., HTTPS/SSL) to protect your data.
+
+    Local Storage: Your data is stored locally on your device using Hive, a secure data storage solution. Hive uses encryption to ensure your data is safe and only accessible through the app.
+
+    Access Control: We implement strict access control mechanisms to ensure that only authorized personnel can access your personal information. These measures include authentication and authorization protocols.
+
+    Secure Third-Party Services: If we use third-party services (e.g., cloud storage providers) to store or process personal data, we ensure that these partners are compliant with industry-standard security practices, such as GDPR or ISO 27001 certifications. These third-party services are contractually obligated to protect your data and use it solely for purposes specified by us.
+
+6. Data Sharing
+
+We do not share your personal information with third parties, except in the following cases:
+
+    Legal Requirements: To comply with legal obligations or to protect our rights, we may disclose your information.
+
+    Service Providers: We may work with trusted third-party service providers to support app functionality. These providers are required to protect your data and use it only for specific purposes as directed by us.
+
+7. Your Rights
+
+You have the following rights regarding your personal information:
+
+    Access and Update: You can review and update your personal information through the app’s settings.
+
+    Delete Your Data: You may request the deletion of your personal data by contacting us directly.
+
+    Opt-Out: You can opt out of receiving non-essential communications by following the unsubscribe instructions in our emails.
+
+8. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time. Any changes will be posted on our website and within the app. Your continued use of the app following any changes signifies your acceptance of the revised policy.
+9. Contact Us
+
+If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:
+
+Email: ajinsanthosh0123@gmail.com
   """;
 
   const PrivacypolicyContent({super.key});

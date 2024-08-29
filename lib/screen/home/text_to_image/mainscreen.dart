@@ -6,9 +6,18 @@ import 'package:leezon/utility/pallete.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
-class Texttoimagecreation extends StatelessWidget {
+class Texttoimagecreation extends StatefulWidget {
   Texttoimagecreation({super.key});
+
+  @override
+  State<Texttoimagecreation> createState() => _TexttoimagecreationState();
+}
+
+class _TexttoimagecreationState extends State<Texttoimagecreation> {
   final TextEditingController _promtcontroller = TextEditingController();
+
+  
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -153,7 +162,12 @@ class Texttoimagecreation extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
-                  const SizedBox(height: 50),
+                   const SizedBox(height: 50),
+                  if (imageProvider.isSaving)
+                    Lottie.asset('assets/lotti/loading.json', width: 150),
+                    
+
+               
                   Padding(
                     padding: const EdgeInsets.only(bottom: 50),
                     child: Container(
@@ -164,7 +178,7 @@ class Texttoimagecreation extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12),
                         boxShadow: const [
                           BoxShadow(
-                            color:Pallete.blackColor,
+                            color: Pallete.blackColor,
                             offset: Offset(2, 2),
                             blurRadius: 4,
                           ),
@@ -177,6 +191,7 @@ class Texttoimagecreation extends StatelessWidget {
                             Provider.of<ImageGenerationProvider>(context,
                                     listen: false)
                                 .saveImage(imageProvider.imageData);
+                                
                           } else {
                             print('No image to save');
                           }

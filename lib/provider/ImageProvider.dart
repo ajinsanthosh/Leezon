@@ -1,9 +1,9 @@
+import 'dart:convert';
 import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:http/http.dart' as http;
-import 'dart:convert';
-
 import 'package:leezon/hive/image_data.dart';
 
 class ImageGenerationProvider with ChangeNotifier {
@@ -11,6 +11,9 @@ class ImageGenerationProvider with ChangeNotifier {
   Uint8List imageData = Uint8List(0);
   String errorMessage = '';
   List<ImageData> savedImages = [];
+
+  bool isSaving = false;
+  bool isSaved = false;
 
   ImageGenerationProvider() {
     loadSavedImages();
@@ -67,15 +70,28 @@ class ImageGenerationProvider with ChangeNotifier {
   }
 
   Future<void> saveImage(Uint8List imageData) async {
+    if (imageData.isEmpty) return;
+
+    isSaving = true;
+    notifyListeners();
+
     try {
       final box = await Hive.openBox<ImageData>('images');
       final newImage = ImageData(imageData, DateTime.now());
       await box.add(newImage);
       savedImages.add(newImage);
+       isSaved = true;
+
+        await Future.delayed(Duration(seconds: 4));
+          isSaved = false; 
       notifyListeners();
     } catch (e) {
       print('Error saving image: $e');
+    }finally {
+      isSaving = false;
+      notifyListeners();
     }
+
   }
 
   Future<void> loadSavedImages() async {

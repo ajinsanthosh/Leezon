@@ -1,15 +1,13 @@
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-
 import 'package:leezon/provider/profileprovider.dart';
 import 'package:leezon/screen/Auth/interestarea.dart';
 import 'package:leezon/screen/Auth/usergender.dart';
-
 import 'package:leezon/utility/commen_widget/custom_iconbutton.dart';
 import 'package:leezon/utility/pallete.dart';
-import 'dart:io';
-
 import 'package:provider/provider.dart';
 
 class ProfilePicture extends StatefulWidget {
@@ -132,7 +130,7 @@ class _ProfilePictureState extends State<ProfilePicture> {
                             newImagePath: _image!.path);
                         print(
                             'Updated profile image path: ${profileProvider.profile!.imagePath}');
-
+          
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(

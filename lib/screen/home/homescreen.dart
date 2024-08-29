@@ -170,7 +170,7 @@ class Homescreen extends StatelessWidget {
                                     Padding(
                                       padding: EdgeInsets.only(left: 7, right: 5),
                                       child: Text(
-                                        "AI  Image Genetator",
+                                        "AI  Image Generator",
                                         style: TextStyle(
                                             fontSize: 20,
                                             fontWeight: FontWeight.bold,
@@ -267,7 +267,7 @@ class Homescreen extends StatelessWidget {
                                       height: 5,
                                     ),
                                     Text(
-                                      "Free to intract!.....",
+                                      "Free to interact!.....",
                                       style: TextStyle(
                                           fontSize: 18, color: Colors.black),
                                     )

@@ -1,11 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:leezon/screen/Auth/phonenumber_auth.dart';
+import 'package:leezon/screen/Auth/username.dart';
+import 'package:leezon/screen/home/navigation_menu.dart';
 import 'package:leezon/utility/pallete.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:leezon/screen/home/navigation_menu.dart';
-
-import 'package:leezon/screen/Auth/username.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});

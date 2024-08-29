@@ -4,17 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:leezon/firebase_options.dart';
 import 'package:leezon/hive/conversation.dart';
-import 'package:leezon/hive/profile_model.dart';
 import 'package:leezon/hive/image_data.dart';
+import 'package:leezon/hive/profile_model.dart';
 import 'package:leezon/provider/ImageProvider.dart';
 import 'package:leezon/provider/NavigationProvider.dart';
 import 'package:leezon/provider/auth_provider.dart';
+import 'package:leezon/provider/chat_provider.dart';
 import 'package:leezon/provider/profileprovider.dart';
 import 'package:leezon/provider/thought_provider.dart';
-import 'package:leezon/utility/pallete.dart';
-import 'package:leezon/provider/chat_provider.dart';
 import 'package:leezon/provider/voice_provider.dart';
 import 'package:leezon/screen/Auth/splashScreen.dart';
+import 'package:leezon/utility/pallete.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
